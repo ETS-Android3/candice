@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.candice.ImageFragment">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/creatodisplay"
+        android:text="Scan an image to translate"
+        android:textColor="@color/fontPrimaryColour"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/theToolbarView"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:layout_below="@id/title"
+        android:background="@color/colorSecondary" />
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/theToolbarView" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/textViewImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@id/fabCamera"
+            android:background="@drawable/bg_translation_text"
+            android:fontFamily="@font/creatodisplay"
+            android:gravity="center"
+            android:hint="Waiting for the camera"
+            android:maxLines="4"
+            android:minHeight="50dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/offGray"
+            android:textSize="18sp" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_baseline_check_24"
+            android:tint="@color/fontPrimaryColour" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="22dp">
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/easyFlip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoFlipBack="false"
+            app:flipDuration="1000"
+            app:flipEnabled="true"
+            app:flipFrom="right"
+            app:flipOnTouch="true"
+            app:flipType="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#2BC6C5">
+
+                <EditText
+                    android:id="@+id/answerEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="16dp"
+                    android:gravity="center"
+                    android:hint="Add Answer here"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Front Layout Goes Here -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="#6021EF">
+
+                <EditText
+                    android:id="@+id/questionEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:hint="Add Question"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/addFlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card"
+        android:layout_centerHorizontal="true"
+        android:text="Ok" />
+
+</RelativeLayout>

@@ -1,0 +1,339 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/Theme.Candice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        app:layout_constraintBottom_toTopOf="@+id/translationBit"
+        tools:ignore="MissingConstraints">
+
+        <Spinner
+            android:id="@+id/sourceLangSelector"
+            android:layout_width="158dp"
+            android:layout_height="53dp"
+            android:dropDownWidth="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/buttonSyncSource"
+            app:layout_constraintEnd_toStartOf="@id/buttonSwitchLang"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSwitchLang"
+            style="@style/IconOnlyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="0dp"
+            android:text=""
+            app:icon="@drawable/outline_sync_alt_24"
+            app:layout_constraintEnd_toStartOf="@+id/targetLangSelector"
+            app:layout_constraintStart_toEndOf="@+id/sourceLangSelector" />
+
+        <Spinner
+            android:id="@+id/targetLangSelector"
+            android:layout_width="158dp"
+            android:layout_height="53dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonSwitchLang"
+            app:layout_constraintTop_toTopOf="@id/sourceLangSelector" />
+
+        <ToggleButton
+            android:id="@+id/buttonSyncSource"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:textOff="@string/download_model"
+            android:textOn="@string/delete_model"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/downloadedModels"
+            app:layout_constraintTop_toBottomOf="@id/sourceLangSelector" />
+
+        <ToggleButton
+            android:id="@+id/buttonSyncTarget"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp"
+            android:textOff="@string/download_model"
+            android:textOn="@string/delete_model"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/downloadedModels"
+            app:layout_constraintTop_toBottomOf="@+id/targetLangSelector" />
+
+        <TextView
+            android:id="@+id/downloadedModels"
+            android:layout_width="133dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:text="@string/downloaded_models_label"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSwitchLang" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/translationBit"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        android:layout_above="@+id/frame"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:weightSum="100"
+        app:layout_constraintTop_toBottomOf="@+id/mainFragment">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:orientation="vertical"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@+id/mainFragment">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="7.5dp"
+                android:paddingBottom="3dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/voiceTranslateBox"
+                        android:background="@color/off_white"
+                        android:paddingBottom="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/source_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/off_white"
+                            android:fontFamily="@font/creatodisplay"
+                            android:gravity="center"
+                            android:hint="Enter text"
+                            android:imeOptions="actionDone"
+                            android:inputType="none|text|textMultiLine"
+                            android:paddingStart="15dp"
+                            android:paddingTop="15dp"
+                            android:paddingRight="15dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/offGray"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:typeface="serif">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </ScrollView>
+
+                    <ProgressBar
+                        android:id="@+id/progress_circular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="80dp"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:id="@+id/voiceTranslateBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/off_white">
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.8dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="#000000" />
+
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/translateButton"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/translatebutton"
+                        android:drawableTint="@android:color/white"
+                        android:fontFamily="@font/creatodisplay"
+                        android:text="Translate"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/paste_source"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/outline_content_paste_24"
+                        app:tint="@color/imageColor" />
+
+                    <ImageView
+                        android:id="@+id/clear"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toRightOf="@id/paste_source"
+                        android:src="@drawable/outline_delete_24"
+                        app:tint="@color/imageColor" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:paddingBottom="3dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0.2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/off_white">
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/buttonRelative"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="27dp"
+                        android:background="@color/off_white"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/translated_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/off_white"
+                            android:fontFamily="@font/creatodisplay"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:typeface="serif">
+
+                        </TextView>
+                    </ScrollView>
+
+                    <RelativeLayout
+                        android:id="@+id/buttonRelative"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/off_white">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:background="#000000" />
+
+
+                        <ImageView
+                            android:id="@+id/copy"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/outline_content_copy_24"
+                            app:tint="@color/imageColor" />
+
+                        <ImageView
+                            android:id="@+id/share"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toRightOf="@id/copy"
+                            android:src="@drawable/outline_share_24"
+                            app:tint="@color/imageColor" />
+
+                        <ImageView
+                            android:id="@+id/speaker_source"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_toRightOf="@id/share"
+                            android:src="@drawable/outline_record_voice_over_24"
+                            app:tint="@color/imageColor" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

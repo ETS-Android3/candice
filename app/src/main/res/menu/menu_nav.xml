@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeBottomNavButton"
+        android:icon="@drawable/outline_cottage_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/voiceBottomNavButton"
+        android:icon="@drawable/outline_keyboard_voice_24"
+        android:title="Voice" />
+
+
+    <item
+        android:id="@+id/imageScanBottomNavButton"
+        android:icon="@drawable/outline_satellite_24"
+        android:title="Image" />
+
+
+    <item
+        android:id="@+id/historyBottomNavButton"
+        android:icon="@drawable/outline_history_24"
+        android:title="History" />
+
+    <item
+        android:id="@+id/gameBottomNavButton"
+        android:icon="@drawable/outline_sports_esports_24"
+        android:title="Flashcards" />
+
+</menu>

@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 30
+    buildToolsVersion "31.0.0"
+
+    defaultConfig {
+        applicationId "com.example.candice"
+        minSdk 28
+        targetSdk 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    //Design implementation:
+    implementation("androidx.compose.ui:ui:1.0.1")
+
+    // Tooling support (Previews, etc.)
+    implementation("androidx.compose.ui:ui-tooling:1.0.1")
+
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation("androidx.compose.foundation:foundation:1.0.1")
+
+    // Material Design
+    implementation("androidx.compose.material:material:1.0.1")
+
+    // Material design icons
+    implementation("androidx.compose.material:material-icons-core:1.0.1")
+    implementation("androidx.compose.material:material-icons-extended:1.0.1")
+
+    // Integration with observables
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.1")
+    implementation("androidx.compose.runtime:runtime-rxjava2:1.0.1")
+
+    //For additional design features
+    implementation 'com.google.android.material:material:1.4.0'
+
+    //For EasyFlipView on Flashcards
+    implementation 'com.wajahatkarim3.EasyFlipView:EasyFlipView:3.0.0'
+
+    //Camera source + Text Recognizer
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+
+    //View models and lifecycles
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Google Translate Language Model (MLKit Translate)
+    implementation 'com.google.mlkit:translate:16.1.2'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
