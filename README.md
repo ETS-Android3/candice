@@ -2,7 +2,7 @@
 
   <p align="center">
     A new Language Translator.<br>
-    <a href="https://drive.google.com/file/d/1DqbUpF3027hVPmyz47OU05xS8vpmeIr_/view?usp=sharing">APK Download</a>
+    <a href="https://github.com/olivershooter/Candice-Android-Translation-Application/blob/main/app-debug.apk">APK Download</a>
   </p>
 
 
