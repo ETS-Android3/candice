@@ -5,8 +5,6 @@
     <a href="https://github.com/olivershooter/Candice-Android-Translation-Application/blob/main/app-debug.apk">APK Download</a>
   </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
@@ -29,22 +27,19 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-This project was built for my dissertation project for the <a href="https://www.birmingham.ac.uk/index.aspx">University of Birmingham</a>, MSc Computer Science. Thank you for checking it out. I'm sure there's a few errors and design choices that may not be the most efficient but as a learning student and growing developer, I was proud to have got this working with the features I included. 
-
+This project was built for my dissertation project for the <a href="https://www.birmingham.ac.uk/index.aspx">University of Birmingham</a>, MSc Computer Science. Thank you for checking it out. I'm sure there's a few errors and design choices that may not be the most efficient but as a learning student and growing developer, I was proud to have got this working with the features I included. I ultimately achieved a Merit in the course with thanks to this project.
 
 ### Built With
 
-* [Android Studio - Arctic Fox](https://developer.android.com/studio/preview)
-* [Java](https://www.java.com/en/)
-
-
+- [Android Studio - Arctic Fox](https://developer.android.com/studio/preview)
+- [Java](https://www.java.com/en/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -58,12 +53,20 @@ Gradle: 7.0.2<br>
 ### Installation
 
 1. Clone the repo<br>
-        Clone the repo locally and simply open within a compatible Android IDE - preferably with an AVD Emulator up and running.
+   Clone the repo locally and simply open within a compatible Android IDE - preferably with an AVD Emulator up and running.
 
 2. Download the APK<br>
-        Or alternatively you can download and save the APK onto a local device running Android. The APK needs to be <b>trusted</b> before installation starts.
+   Or alternatively you can download and save the APK onto a local device running Android. The APK needs to be <b>trusted</b> before installation starts.
 
+<!-- SCREENS -->
 
+## Screenshots
+
+![Alt text](Screenshots/Home.png?raw=true "Home")
+![Alt text](Screenshots/History.png?raw=true "History")
+![Alt text](Screenshots/Image.png?raw=true "Image")
+![Alt text](Screenshots/Speak.png?raw=true "Speak or Voice")
+![Alt text](Screenshots/Flashcards.png?raw=true "Flashcards")
 
 ## References
 
@@ -84,9 +87,8 @@ Google:<br>
 [Google Fonts (Icons)](https://fonts.google.com/icons)<br>
 [MLKit Translation](https://developers.google.com/ml-kit/language/translation)<br>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
-Oliver Shooter (2244190) - OXS090@student.bham.ac.uk
+[Oliver Shooter](https://www.olivershooter.me/)
